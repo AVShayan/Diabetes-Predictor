@@ -1,5 +1,6 @@
 # We first install and import the necessary libraries for our creating our ML model
 import pandas as pd
+import numpy as np
 import pickle
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier,BaggingClassifier
@@ -134,7 +135,7 @@ with open('ml_model.pkl',"wb") as f:
 
 # Testing the trained model with some sample input
 # We make sure to give the features in the order in which it was trained
-sample_input = [[85,2,22.6,134,66,5.3,4.34,1.15,1.33,2.18,17,4.8,50.3,5.26,3,3,0]]
+sample_input = np.array([[85,2,22.6,134,66,5.3,4.34,1.15,1.33,2.18,17,4.8,50.3,5.26,3,3,0]])
 prediction = model.predict(sample_input)
 print("Sample Prediction: ",prediction) # 1 -> Yes | 0 -> No
 probability = model.predict_proba(sample_input)
