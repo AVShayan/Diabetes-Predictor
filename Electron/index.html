@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Medico</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=Roboto+Mono&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="container nav-container">
+                <div class="logo">
+                <div class="logo-icon"><img src='../../mmf.png'></div>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="container">
+                <h1>Predict Diabetes Risk with Medico</h1>
+                <p>Enter your health parameters for instant risk assessment using our ML Model!
+                    You can also save a report for reference!
+                </p>
+            </div>
+            <div class="background-icons">
+                <img src="./svg/medical.svg" class="floating-icon" alt="icon">
+                <img src="./svg/medical2.svg" class="floating-icon" alt="icon">
+                <img src="./svg/drug.svg" class="floating-icon" alt="icon">
+                <img src="./svg/tube.svg" class="floating-icon" alt="icon">
+                <img src="./svg/blood.svg" class="floating-icon" alt="icon">
+            </div>
+        </section>
+        
+        <!-- We take all the patient's data here :- -->
+        <section class="input-section">
+            <div class="container">
+                <div class="input-grid">
+                    <div class="input-container">
+                        <div class="input-group">
+                            <div class="input-header">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xlmns="'http://www.w3.org/2000/svg">
+                                    <path d="M11.5 2C6.81 2 3 5.81 3 10.5C3 15.19 6.81 19 11.5 19H12V22C16.86 19.66 20 15 20 10.5C20 5.81 16.19 2 11.5 2Z" fill="#1E3A8A"/>
+                                </svg>
+                                <h2>Personal Metrics</h2>
+                            </div>
+                                <div class="input-card">
+                                    <!--Input for Name-->
+                                    <div class="input-label">
+                                        <span>Name</span>
+                                        <div class="tooltip">?
+                                            <div class="tooltip-text">Name required just to generate your report</div>
+                                        </div>
+                                    </div>
+                                    <input type="text" id="input-18" placeholder="Enter your name">
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="input-card">
+                                <!--Input for Age-->
+                                <div class="input-label">
+                                    <span>Age</span>
+                                    <div class="tooltip">?
+                                        <div class="tooltip-text">Patient's age in years</div>
+                                    </div>
+                                </div>
+                                <input type="number" id="input-1" min="0" max="120" placeholder="Enter age">
+                                <div class="validation"></div>
+                            </div>
+                            <!--Input for Gender-->
+                            <div class="input-card">
+                                <div class="input-label">
+                                    <span>Gender</span>
+                                </div>
+                                    <select id="input-2">
+                                        <option value="">Gender</option>
+                                        <option value="0">Male</option>
+                                        <option value="1">Female</option>
+                                    </select>
+                                <div class="validation"></div>
+                            </div>
+                            <!--Input for BMI-->
+                            <div class="input-card">
+                                <div class="input-label">
+                                    <span>Body Mass Index</span>
+                                    <div class="tooltip">?
+                                        <div class="tooltip-text">BMI = (Weight/Height<sup>2</sup>)</div>
+                                    </div>
+                                </div>
+                                <input type="number" id="input-3" placeholder="Enter BMI">
+                                <div class="validation"></div>
+                            </div>
+                            <div class="input-header">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xlmns="'http://www.w3.org/2000/svg">
+                                    <path d="M11.5 2C6.81 2 3 5.81 3 10.5C3 15.19 6.81 19 11.5 19H12V22C16.86 19.66 20 15 20 10.5C20 5.81 16.19 2 11.5 2Z" fill="#1E3A8A"/>
+                                </svg>
+                                <h2>Vital Signs & Glucose Levels</h2>
+                            </div>
+                            <!--Input for Systolic Blood Pressure-->
+                            <div class="input-card">
+                                <div class="input-label">
+                                    <span>Systolic Blood Pressure</span>
+                                    <div class="tooltip">?
+                                        <div class="tooltip-text">Your SBP in mmHg</div>
+                                    </div>
+                                </div>
+                                <input type="number" id="input-4" placeholder="Enter SBP">
+                                <div class="validation"></div>
+                            </div>
+                            <!--Input for Diastolic Blood Pressure-->
+                            <div class="input-card">
+                                <div class="input-label">
+                                    <span>Diastolic Blood Pressure</span>
+                                    <div class="tooltip">?
+                                        <div class="tooltip-text">Your DBP in mmHg</div>
+                                    </div>
+                                </div>
+                                <input type="number" id="input-5" placeholder="Enter DBP">
+                                <div class="validation"></div>
+                            </div>
+                            <!--Input for Fasting Plasma Glucose-->
+                            <div class="input-card">
+                                <div class="input-label">
+                                    <span>Fasting Plasma Glucose</span>
+                                    <div class="tooltip">?
+                                        <div class="tooltip-text">Fasting Blood Glucose is the amount of sugar in your blood after not eating for atleast 8 hours(in mg/dL)</div>
+                                    </div>
+                                </div>
+                                <input type="number" id="input-6" placeholder="Enter FPS">
+                                <div class="validation"></div>
+                            </div>
+                            <!--Input for Cholestrol-->
+                            <div class="input-card">
+                                <div class="input-label">
+                                    <span>Cholestrol</span>
+                                    <div class="tooltip">?
+                                        <div class="tooltip-text">Your Cholestrol Level in mg/dL</div>
+                                    </div>
+                                </div>
+                                <input type="number" id="input-7" placeholder="Enter Cholestrol Levels">
+                                <div class="validation"></div>
+                            </div>
+                            <!--Input for Triglyceride-->
+                            <div class="input-card">
+                                <div class="input-label">
+                                    <span>Triglyceride</span>
+                                    <div class="tooltip">?
+                                        <div class="tooltip-text">Your Triglyceride Level in mg/dL</div>
+                                    </div>
+                                </div>
+                                <input type="number" id="input-8" placeholder="Enter Triglyceride Levels">
+                                <div class="validation"></div>
+                            </div>
+                            <div class="input-header">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xlmns="'http://www.w3.org/2000/svg">
+                                    <path d="M11.5 2C6.81 2 3 5.81 3 10.5C3 15.19 6.81 19 11.5 19H12V22C16.86 19.66 20 15 20 10.5C20 5.81 16.19 2 11.5 2Z" fill="#1E3A8A"/>
+                                </svg>
+                                <h2>Blood and Bio-Chemical Profile</h2>
+                            </div>
+                            <!--Input for HDL-->
+                            <div class="input-card">
+                                <div class="input-label">
+                                    <span>High Density Lipoprotein</span>
+                                    <div class="tooltip">?
+                                        <div class="tooltip-text">(Good Cholestrol) Level in mg/dL</div>
+                                    </div>
+                                </div>
+                                <input type="number" id="input-9" placeholder="Enter High Lipoprotein Levels">
+                                <div class="validation"></div>
+                            </div>
+                            <!--Input for LDL-->
+                            <div class="input-card">
+                                <div class="input-label">
+                                    <span>Low Density Lipoprotein</span>
+                                    <div class="tooltip">?
+                                        <div class="tooltip-text">(Bad Cholestrol) Level in mg/dL</div>
+                                    </div>
+                                </div>
+                                <input type="number" id="input-10" placeholder="Enter Low Lipoprotein Levels">
+                                <div class="validation"></div>
+                            </div>
+                            <!--Input for ALT-->
+                            <div class="input-card">
+                                <div class="input-label">
+                                    <span>Alanine Aminotransferase</span>
+                                    <div class="tooltip">?
+                                        <div class="tooltip-text">Your ALT Level in U/L</div>
+                                    </div>
+                                </div>
+                                <input type="number" id="input-11" placeholder="Enter Alanine Aminotransferase Levels">
+                                <div class="validation"></div>
+                            </div>
+                            <!--Input for BUN-->
+                                <div class="input-card">
+                                    <div class="input-label">
+                                        <span>Blood Urea Nitrogen</span>
+                                        <div class="tooltip">?
+                                            <div class="tooltip-text">Your BUN Level in mg/dL</div>
+                                        </div>
+                                    </div>
+                                    <input type="number" id="input-12" placeholder="Enter Blood Urea Nitrogen Levels">
+                                    <div class="validation"></div>
+                                </div>
+                            <!--Input for CCR-->
+                                <div class="input-card">
+                                    <div class="input-label">
+                                        <span>Creatinine Clearance</span>
+                                        <div class="tooltip">?
+                                            <div class="tooltip-text">Your CCR Level in mL/min</div>
+                                        </div>
+                                    </div>
+                                    <input type="number" id="input-13" placeholder="Enter Creatinine Clearance Levels">
+                                    <div class="validation"></div>
+                                </div>
+                                <!--Input for Final Fasting Plasma Glucose-->
+                                 <div class="input-card">
+                                    <div class="input-label">
+                                        <span>Final Fasting Plasma Glucose</span>
+                                        <div class="tooltip">?
+                                            <div class="tooltip-text">Your FFPG Level in mg/dL</div>
+                                        </div>
+                                </div>
+                                <input type="number" id="input-14" placeholder="Enter FFPG">
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="input-header">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xlmns="'http://www.w3.org/2000/svg">
+                                        <path d="M11.5 2C6.81 2 3 5.81 3 10.5C3 15.19 6.81 19 11.5 19H12V22C16.86 19.66 20 15 20 10.5C20 5.81 16.19 2 11.5 2Z" fill="#1E3A8A"/>
+                                    </svg>
+                                    <h2>Lifestyle Factors</h2>
+                                </div>
+                                <!--Input for Smoker-->
+                                <div class="input-card">
+                                    <div class="input-label">
+                                        <span>Do you Smoke?</span>
+                                    </div>
+                                    <select id="input-15">
+                                        <option value="">Choose Here</option>
+                                        <option value="1">Current Smoker</option>
+                                        <option value="2">Ever Smoker</option>
+                                        <option value="3">Never Smoker</option>
+                                    </select>
+                                    <div class="validation"></div>
+                                </div>
+                                <!--Input for Drinker-->
+                                <div class="input-card">
+                                    <div class="input-label">
+                                        <span>Do you Drink?</span>
+                                    </div>
+                                    <select id="input-16">
+                                        <option value="">Choose Here</option>
+                                        <option value="1">Current Drinker</option>
+                                        <option value="2">Ever Drinker</option>
+                                        <option value="3">Never Drinker</option>
+                                    </select>
+                                    <div class="validation"></div>
+                                </div>
+                                <!--Input for Family History-->
+                                <div class="input-card">
+                                    <div class="input-label">
+                                        <span>Do you have any family history of Diabetes?</span>
+                                    </div>
+                                    <select id="input-17">
+                                        <option value="">Family History</option>
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                    <div class="validation"></div>
+                                </div>
+                        </div>
+                        <button id="predict-btn" class="btn btn-primary pulse" style="width: 100%; margin-top: 20px;">
+                            Analyze
+                        </button>
+                    </div>
+        </section>
+
+        <div class="loading" id="loading">
+            <div class="dna-loader">
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+            </div>
+            <h3>Analyzing Health Parameters...</h3>
+            <p>Our ML Model is processing your data!</p>
+        </div>
+
+        <section class="prediction-section" id="prediction-section" style="display:none;">
+            <div class="container">
+                <div class="prediction-card" id="prediction-card">
+                    <div class="prediction-icon" id="prediction-icon"></div>
+                    <h2 class="prediction-result" id="prediction-result">Low Probability</h2>
+                    <p class="prediction-desc" id="prediction-desc">Based on the provided parameters, the likelihood of Type 2 Diabetes is low. We always advise you to consult a doctor</p>
+                    <div class="prediction-score" id="prediction-score">45%</div>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" id="save-report">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9H15V3H9V9H5L12 16L19 9ZM5 18V20H19V18H5Z" fill="white"/>
+                            </svg>Save Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="loading-2" id="save-loading">
+            <div class="dna-loader">
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+            </div>
+            <h3>Please Wait...</h3>
+            <p>Your Report is getting ready!</p>
+        </div>
+        <div class="refresh">
+            <button class="btn btn-primary" id="refresh-btn">⟳ Analyze Again!</button>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <p>Medico ©</p>
+                    <p class="disclaimer">Medico - Designed & Created By Md.Anfaas and Md.Sharique</p>
+                </div>
+             </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

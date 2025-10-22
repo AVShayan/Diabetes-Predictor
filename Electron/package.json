@@ -1,0 +1,32 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "Electron app for Diabetes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build":{
+    "appId": "com.Shayan.Medico",
+    "productName": "Medico",
+    "directories": {
+      "output":"dist"
+    },
+      "files": [
+        "**/*",
+        "Node/**/*"
+      ],
+      "win":{
+        "target":"nsis",
+        "icon":"icons/Medico.ico"
+      },
+      "mac":{
+        "target":"dmg",
+        "icon":"icons/Medico.ico"
+      }
+  },
+  "author": "Shayan",
+  "license": "ISC"
+}
