@@ -29,11 +29,7 @@ This project combines Machine Learning, FastAPI, Node.js, and Electron into one 
 
 
 
-Electron (Frontend UI)
-↓
-Node.js (Backend Middleware)
-↓
-FastAPI (ML Model API)
+Electron (Frontend UI) -<-> Node.js (Backend Middleware) <--> FastAPI (ML Model API)
 
 
 
@@ -54,7 +50,7 @@ FastAPI (ML Model API)
 | *Machine Learning* | Python, scikit-learn, pandas, numpy |
 | *API* | FastAPI, Render |
 | *Backend* | Node.js, Express, Puppeteer |
-| *Frontend* | Electron, HTML, CSS, JavaScript |
+| *Frontend* | Electron, Javascript |
 | *Deployment* | Render (API), Electron Builder (App Packaging) |
 
 ---
@@ -65,7 +61,7 @@ The backend (Node.js) uses *Puppeteer* to convert HTML templates into profession
 - Patient input details  
 - Model prediction result  
 - Date and session info  
-- Branded app logo and summary  
+- Branded app logo and summary of report(Interpretation)  
 
 ---
 
@@ -117,9 +113,6 @@ npm install
 bash
 npm start
 
-
-Make sure your *FastAPI* backend (on Render) is active and the API URL is configured in your .env file.
-
 ---
 
 🏗️ Building the Desktop App
@@ -139,7 +132,7 @@ Output files will appear inside the dist/ folder:
 
 🌐 Deployment
 
-* *FastAPI model* deployed on [Render](https://render.com/)
+* *FastAPI model* deployed on [Render](https://medico-api-1.onrender.com/predict)
 * *Electron app* built using [Electron Builder](https://www.electron.build/)
 
 ---
@@ -149,10 +142,12 @@ Output files will appear inside the dist/ folder:
 *Md.Thahood Anfaas*
 💻 B.Tech 3rd Year | App Developer
 📫 [LinkedIn](https://linkedin.com/in/) | [GitHub](https://github.com/)
+
 *Md.Shariq*
 💻 B.Tech 3rd Year | Frontend Developer
 📫 [LinkedIn](https://linkedin.com/in/) | [GitHub](https://github.com/)
 *AV Shayan*
+
 💻 B.Tech 3rd Year | Full-stack Engineer
 📫 [LinkedIn](https://linkedin.com/in/av-shayan) | [GitHub](https://github.com/AVShayan)
 
