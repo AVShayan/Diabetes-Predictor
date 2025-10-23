@@ -1,11 +1,11 @@
---- 🩺 Diabetes Predictor Desktop App
+🩺 Diabetes Predictor Desktop App
 
 A Full-stack cross-platform Desktop application that predicts the likelihood of *Type 1 Diabetes* based on medical input parameters.  
 This project combines Machine Learning, FastAPI, Node.js, and Electron into one integrated solution — complete with PDF report generation and offline support.
 
 ---
 
---- 🚀 Features
+🚀 Features
 
 ✅ Predicts diabetes risk using a trained ML model  
 ✅ Beautiful Electron-based desktop UI (Windows & macOS)  
@@ -29,7 +29,7 @@ This project combines Machine Learning, FastAPI, Node.js, and Electron into one 
 
 
 
-Electron (Frontend UI) -<-> Node.js (Backend Middleware) <--> FastAPI (ML Model API)
+Electron (Frontend UI)  <-->  Node.js (Backend Middleware)  <-->  FastAPI (ML Model API)
 
 
 
@@ -61,13 +61,13 @@ The backend (Node.js) uses *Puppeteer* to convert HTML templates into profession
 - Patient input details  
 - Model prediction result  
 - Date and session info  
-- Branded app logo and summary of report(Interpretation)  
+- Branded app logo and Summary of Report (Interpretation)  
 
 ---
 
 🧩 Project Structure
 
-
+`
 
 diabetes-predictor/
 │
@@ -146,8 +146,8 @@ Output files will appear inside the dist/ folder:
 *Md.Shariq*
 💻 B.Tech 3rd Year | Frontend Developer
 📫 [LinkedIn](https://linkedin.com/in/) | [GitHub](https://github.com/)
-*AV Shayan*
 
+*AV Shayan*
 💻 B.Tech 3rd Year | Full-stack Engineer
 📫 [LinkedIn](https://linkedin.com/in/av-shayan) | [GitHub](https://github.com/AVShayan)
 
