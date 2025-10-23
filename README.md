@@ -1,11 +1,11 @@
--- 🩺 Diabetes Predictor Desktop App
+--- 🩺 Diabetes Predictor Desktop App
 
 A Full-stack cross-platform Desktop application that predicts the likelihood of *Type 1 Diabetes* based on medical input parameters.  
 This project combines Machine Learning, FastAPI, Node.js, and Electron into one integrated solution — complete with PDF report generation and offline support.
 
 ---
 
--- 🚀 Features
+--- 🚀 Features
 
 ✅ Predicts diabetes risk using a trained ML model  
 ✅ Beautiful Electron-based desktop UI (Windows & macOS)  
