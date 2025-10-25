@@ -87,7 +87,7 @@ const pdfReport = async (req,res) => {
             <div class="section-title" style="text-decoration:none;">LIFESTYLE FACTORS</div>
             <table class="report">
                 <tr><td>Smoking Status</td><td>${smoking == 1 ? 'Current Smoker' : (smoking == 2) ? 'Ever Smoker' : 'Never Smoker'}</td></tr>
-                <tr><td>Drinking Status</td><td>${drinking == 1 ? 'Current Smoker' : (drinking == 2) ? 'Ever Smoker' : 'Never Smoker'}</td></tr>
+                <tr><td>Drinking Status</td><td>${drinking == 1 ? 'Current Drinker' : (drinking == 2) ? 'Ever Drinker' : 'Never Drinker'}</td></tr>
             </table>
             <div class="section-title" style="text-decoration:underline;">RESULT / INTERPRETATION</div>
             <div style="border: 3px solid ${isDiabetes ? 'red' : 'green'}; padding: 10px; margin-top: 5px; font-size: 13px;">
